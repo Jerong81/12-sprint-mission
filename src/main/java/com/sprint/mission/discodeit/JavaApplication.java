@@ -11,6 +11,7 @@ public class JavaApplication {
         UserService userService = new JCFUserService();
 
         User user = new User("test", "test@email.com", "1234", "test");
+        User user2 = new User("test2", "test2#email.com", "1234", "test2");
         userService.save(user);
         System.out.println(userService.findAll());
         System.out.println("---------------사용자 테스트 끝!!!---------------------\n");
