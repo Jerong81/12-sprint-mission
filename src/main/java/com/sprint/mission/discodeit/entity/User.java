@@ -3,16 +3,16 @@ package com.sprint.mission.discodeit.entity;
 import java.util.UUID;
 
 public class User {
-    private UUID id;
+    private final UUID id;
     private String username;
     private String email;
     private String password;
     private String nickname;
-    private Long createdAt;
+    private final Long createdAt;
     private Long updatedAt;
 
     public User(String username, String email, String password, String nickname) {
-        id = UUID.randomUUID();
+        this.id = UUID.randomUUID();
         this.username = username;
         this.email = email;
         this.password = password;
@@ -50,7 +50,7 @@ public class User {
     }
 
 
-    public void update(String username, String email, String password, String nickname){
+    public void update(String username, String email, String password, String nickname) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -64,10 +64,10 @@ public class User {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';
     }
+}
 }
